@@ -12,7 +12,7 @@ app.use("/api", router);             // api router a gönderiyor
 // app.use("/", router);                        // server dan gelen her seyi router a gönderdik...
 
 
-Production
+// Production
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));  // heroku'nun client/build i kullanabilmesi icin..
     app.get("*", (req, res) => {
