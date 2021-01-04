@@ -12,7 +12,6 @@ const authMiddleware = (req, res, next) => {
     console.log("token", token);
 
     // Verify token
-
     jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decodedToken) => {
         console.log("decodedToken", decodedToken);
         if (err) {
