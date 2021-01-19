@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+// const cors = require('cors');
 
 require("dotenv").config();
 
@@ -7,6 +8,7 @@ const connectDB = require("./models/connectDB"); // Database cagirma
 const router = require("./routes/router");   // gelen verileri route da göstermek icin olusturduk..
 connectDB();
 
+// app.use(cors())
 app.use(express.json());                // Postman tarafindan gönderilen datayi json yapiyor
 app.use("/api", router);             // api router a gönderiyor
 // app.use("/", router);                        // server dan gelen her seyi router a gönderdik...
